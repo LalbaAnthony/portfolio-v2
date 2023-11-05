@@ -1,2 +1,5 @@
 TODO:
-- [ ] ...
+- [ ] Terminer accueil avec Reponsive
+- [ ] Faire chacune des sections
+- [ ] Ajouter animations a l'affichage et au hover de chaque element
+- [ ] Ajouter sr-only

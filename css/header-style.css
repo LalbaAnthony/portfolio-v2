@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.header-title:after {
+    content: '_';
+    color: var(--primary);
+}
+
 /* DESKTOP */
 @media (min-width: 768px) {
   header {

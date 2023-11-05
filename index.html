@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Kanit:wght@400;700" rel="stylesheet">
   <link rel="stylesheet" href="css/main-style.css">
   <link rel="stylesheet" href="css/header-style.css">
   <link rel="stylesheet" href="css/content-style.css">
@@ -23,7 +23,7 @@
 
   <main>
     <header>
-      <h2 class="header-title">Portfolio<span class="primary">.</span></h2>
+      <h2 class="header-title">portfolio</h2>
       <ul class="header-list">
         <li class="header-list-item"><a href="#accueil">Accueil</a></li>
         <li class="header-list-item"><a href="#skills">Skills</a></li>
@@ -31,14 +31,15 @@
       </ul>
     </header>
 
-    <section>
+    <section id="accueil">
       <div class="side-by-side-60-40">
-        <div>
-          <h1>Salut ! Moi c'est</h1>
-          <h1>Anthony Lalba</h1>
-          <h1>Et je suis apprenti fullstack developer</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam cum beatae, velit repellendus dicta
-            corrupti vitae blanditiis in.
+        <div class="subsection1">
+          <h3>Salut ! C'est moi</h3>
+          <h1 class="fullname-title">Anthony Lalba</h1>
+          <h3>Et je suis apprenti <span class="primary ">fullstack developer </span></h3>
+          <p class="presentation-paragraph">Doté d'une grande capacité d'adaptation, je suis curieux de nature et sais
+            me montrer autonome et digne de
+            confiance.
           </p>
           <ul class="social-list">
             <li><a href="#" class="social-item"></a></li>
@@ -47,9 +48,10 @@
           </ul>
           <a class="primary-button" href="#" target="_blank" download>
             Télécharger mon CV
+            <span class="sr-only">Cliquez ici pour télécharger mon CV</span>
           </a>
         </div>
-        <div>
+        <div class="subsection2">
           <img src="" alt="Me" />
           <img src="" alt="Background image" />
         </div>

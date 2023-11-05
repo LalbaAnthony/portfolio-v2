@@ -1,1 +1,43 @@
 @charset "UTF-8";
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .side-by-side-60-40 {
+        display: grid;
+        /* 3:2 for 60/40 ratio */
+        grid-template-columns: 3fr 2fr;
+        gap: 20px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .side-by-side-60-40 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-by-side-60-40>.subsection1 {
+        order: 2
+    }
+
+    .side-by-side-60-40>.subsection2 {
+        order: 1
+    }
+}
+
+.fullname-title {
+    font-size: 300%;
+}
+
+.presentation-paragraph {
+    padding: 1.5rem 0;
+}
+
+.social-list {
+    /* ... */
+}
+
+.social-item {
+    /* ... */
+}

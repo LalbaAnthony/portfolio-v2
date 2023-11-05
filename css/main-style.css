@@ -19,11 +19,15 @@
 }
 
 body {
-  font-family: Kanit;
+  font-family: Poppins, sans-serif;
   color: var(--light);
   background-color: var(--dark);
   background: linear-gradient(0deg, var(--primary) -50%, var(--dark) 70%);
   background-attachment: fixed;
+}
+
+h1, h2 {
+  font-family: Kanit;
 }
 
 main {
@@ -42,7 +46,7 @@ main {
 @media (min-width: 768px) {
   main {
     margin: 2rem 3rem;
-    padding: 2rem 3rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -56,6 +60,26 @@ main {
 
 section {
   margin: 2rem 0;
+}
+
+.primary-button {
+  color: var(--dark);
+  background-color: var(--primary);
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: smaller;
+  transition: transform 0.2s;
+}
+
+.primary-button:hover {
+  transform: scale(1.9);
+} 
+
+.poppins {
+  font-family: Poppins !important;
+}
+.kanit {
+  font-family: Kanit !important;
 }
 
 .primary {
