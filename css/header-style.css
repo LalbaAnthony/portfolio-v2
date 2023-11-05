@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  header {
+    display: block;
+  }
+
+  .header-list {
+    margin: 0.5rem 0 0 0;
+  }
+
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-list li:not(:first-child) {
+  margin: 0 0 0 2rem;
+}
+
+.header-list-item>a {
+  color: var(--light);
+  display: block;
+  transition: transform 0.3s;
+}
+
+.header-list-item>a:hover {
+  color: var(--primary);
+  transform: translateX(-5px);
+}
