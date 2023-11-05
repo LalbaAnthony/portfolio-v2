@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.header-title {
+    color: var(--light);
+}
+
 .header-title:after {
     content: '_';
     color: var(--primary);

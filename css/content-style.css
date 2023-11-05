@@ -31,7 +31,7 @@
 }
 
 .presentation-paragraph {
-    padding: 1.5rem 0;
+    padding: 2rem 0;
 }
 
 .social-list {
@@ -40,4 +40,8 @@
 
 .social-item {
     /* ... */
+}
+
+.wavy-background {
+    fill: var(--primary);
 }

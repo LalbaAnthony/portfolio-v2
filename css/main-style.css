@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-  --primary: #01EEFE;
+  --primary: #01eefe;
   --primary-darker: #00737b;
   --dark: #20242D;
   --light: #ffffff;
@@ -59,7 +59,7 @@ main {
 }
 
 section {
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 
 .primary-button {
