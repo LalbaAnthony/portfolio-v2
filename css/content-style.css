@@ -36,15 +36,23 @@
 
 .social-list {
     padding: 0 0 2rem 0;
+    display: flex;
 }
 
 .social-item {
     border: var(--primary) 1px solid;
     border-radius: 25px;
-    padding: 5px;
+    padding: 10px;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.social-item:hover {
+    padding: 12px;
 }
 
 .social-svg {
+    transform: translateY(6px);
     fill: var(--primary);
 }
 

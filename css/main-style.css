@@ -68,11 +68,13 @@ section {
   border-radius: 25px;
   padding: 10px 15px;
   font-size: smaller;
-  transition: transform 0.2s;
+  transition: all 0.2s;
 }
 
 .primary-button:hover {
-  transform: scale(1.9);
+  color: var(--primary);
+  background-color: var(--dark);
+  border: var(--primary) 1px solid;
 } 
 
 .poppins {

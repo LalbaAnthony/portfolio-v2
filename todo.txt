@@ -1,5 +1,5 @@
 TODO:
-- [ ] Fixer le hover des buttons
+- [X] Fixer le hover des buttons
 - [ ] Terminer accueil avec reponsive
 - [ ] Faire chacune des sections
     - [ ] Faire changer la primary color ?
