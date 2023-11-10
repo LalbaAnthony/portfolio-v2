@@ -4,4 +4,4 @@ TODO:
 - [ ] Faire chacune des sections
     - [ ] Faire changer la primary color ?
 - [ ] Ajouter animations a l'affichage et au hover de chaque element
-- [ ] Ajouter sr-only partout
+- [ ] Ajouter sr-only partoutINtegrer API github pour voir mes projets
