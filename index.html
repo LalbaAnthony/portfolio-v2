@@ -95,9 +95,14 @@
 </html>
 
 <script>
-  const accueilItem = document.getElementById("accueil");
-  accueilItem.addEventListener("click", setPrimaryColor("#FF0000"));
+  document.addEventListener('DOMContentLoaded', function () { // wait for DOM content to be loaded to prevent event to be triggered
+    const accueilItem = document.getElementById("accueil");
+    accueilItem.addEventListener("click", function () { setPrimaryColor("#01eefe") });
 
-  const skillsItem = document.getElementById("skills");
-  skillsItem.addEventListener("click", setPrimaryColor("#00FF00"));
+    const skillsItem = document.getElementById("skills");
+    skillsItem.addEventListener("click", function () { setPrimaryColor("#ba5a00") });
+
+    const contactItem = document.getElementById("contact");
+    contactItem.addEventListener("click", function () { setPrimaryColor("#3bba00") });
+  });
 </script>

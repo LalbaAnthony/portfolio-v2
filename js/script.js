@@ -5,7 +5,6 @@ function getPrimaryColor() {
 }
 
 function setPrimaryColor(color) {
-    console.log(color);
     var r = document.querySelector(':root');
     r.style.setProperty('--primary', color);
 }
