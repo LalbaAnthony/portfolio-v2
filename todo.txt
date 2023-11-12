@@ -4,4 +4,6 @@ TODO:
 - [ ] Faire chacune des sections
     - [ ] Faire changer la primary color ?
 - [ ] Ajouter animations a l'affichage et au hover de chaque element
-- [ ] Ajouter sr-only partoutINtegrer API github pour voir mes projets
+- [ ] Ajouter sr-only partout
+- [ ] INtegrer API github pour voir mes projets
+- [ ] Faire un lighthouse et tout opti pour un 100 100 100 100

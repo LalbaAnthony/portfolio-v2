@@ -18,11 +18,13 @@
     }
 
     .side-by-side-60-40>.subsection1 {
-        order: 2
+        order: 2;
     }
 
     .side-by-side-60-40>.subsection2 {
-        order: 1
+        order: 1;
+        width: 50%;
+        margin: 0 auto 1rem auto;
     }
 }
 
@@ -35,8 +37,9 @@
 }
 
 .social-list {
-    padding: 0 0 2rem 0;
+    padding: 0 0 3rem 0;
     display: flex;
+    align-items: center;
 }
 
 .social-item {
