@@ -61,13 +61,11 @@ async function getProjects() {
 
         const formattedProjects = projects.map(project => ({
             name: project.name,
-            description: project.description,
             url: project.html_url,
             language: project.language,
             language_color: getColorFromLanguage(project.language),
             updated_at: project.updated_at,
             updated_at_relative: formatRelativeDate(project.updated_at),
-            owner: project.owner.login,
         }));
 
         return formattedProjects;

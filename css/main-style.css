@@ -18,15 +18,15 @@
 }
 
 /* Code for Firefox */
-/* ::-moz-selection {
-  color: var(--light);
-  background: var(--primary);
+::-moz-selection {
+  color: var(--dark);
+  background: var(--light);
 }
 
 ::selection {
-  color: var(--light);
-  background: var(--primary);
-} */
+  color: var(--dark);
+  background: var(--light);
+}
 
 body {
   font-family: Poppins, sans-serif;
