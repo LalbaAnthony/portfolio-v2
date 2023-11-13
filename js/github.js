@@ -1,5 +1,24 @@
 const username = 'LalbaAnthony';
 
+function getColorFromLanguage(language) {
+    const data = {
+        'JavaScript': '#f1e05a',
+        'HTML': '#e34c26',
+        'CSS': '#563d7c',
+        'PHP': '#4F5D95',
+        'Shell': '#89e051',
+        'C#': '#178600',
+        'C++': '#f34b7d',
+        'Vue': '#2c3e50',
+        'Python': '#3572A5',
+        'TypeScript': '#2b7489',
+        'Java': '#b07219',
+        'C': '#555555'
+    };
+
+    return data[language] || data[language.toLowerCase()] || '#000000';
+}
+
 function formatRelativeDate(dateString) {
     const dateObject = new Date(dateString);
     const currentDate = new Date();
@@ -45,8 +64,9 @@ async function getProjects() {
             description: project.description,
             url: project.html_url,
             language: project.language,
+            language_color: getColorFromLanguage(project.language),
             updated_at: project.updated_at,
-            relative_updated_at: formatRelativeDate(project.updated_at),
+            updated_at_relative: formatRelativeDate(project.updated_at),
             owner: project.owner.login,
         }));
 
