@@ -17,6 +17,17 @@
   list-style-type: none;
 }
 
+/* Code for Firefox */
+/* ::-moz-selection {
+  color: var(--light);
+  background: var(--primary);
+}
+
+::selection {
+  color: var(--light);
+  background: var(--primary);
+} */
+
 body {
   font-family: Poppins, sans-serif;
   color: var(--light);
@@ -26,7 +37,8 @@ body {
   transition: all 0.5s;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Kanit;
 }
 
@@ -75,11 +87,12 @@ section {
   color: var(--primary);
   background-color: var(--dark);
   border: var(--primary) 1px solid;
-} 
+}
 
 .poppins {
   font-family: Poppins !important;
 }
+
 .kanit {
   font-family: Kanit !important;
 }
