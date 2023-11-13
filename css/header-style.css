@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 .header-title {
-    color: var(--light);
+  color: var(--light);
 }
 
 .header-title:after {
-    content: '_';
-    color: var(--primary);
+  content: '_';
+  color: var(--primary);
 }
 
 /* DESKTOP */
@@ -26,7 +26,6 @@
   .header-list {
     margin: 0.5rem 0 0 0;
   }
-
 }
 
 .header-list {

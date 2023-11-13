@@ -1,9 +1,10 @@
 TODO:
 - [X] Fixer le hover des buttons
-- [ ] Terminer accueil avec reponsive
-- [ ] Faire chacune des sections
-    - [ ] Faire changer la primary color ?
+- [X] Terminer accueil avec reponsive
+- [ ] Separer les composants avec https://www.w3schools.com/howto/howto_html_include.asp
+- [ ] Faire changer la primary color en fonction des pages
 - [ ] Ajouter animations a l'affichage et au hover de chaque element
+- [ ] Integrer API github pour voir mes projets
 - [ ] Ajouter sr-only partout
-- [ ] INtegrer API github pour voir mes projets
 - [ ] Faire un lighthouse et tout opti pour un 100 100 100 100
+- [ ] Détourer et mettre ma photo
