@@ -14,8 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Kanit:wght@400;700" rel="stylesheet">
   <link rel="stylesheet" href="css/main-style.css">
   <link rel="stylesheet" href="css/header-style.css">
-  <link rel="stylesheet" href="css/projets-style.css">
-  <script src="js/github.js"></script>
+  <link rel="stylesheet" href="css/contact-style.css">
+  <script src="js/pages/contact.js"></script>
 </head>
 
 <body>
@@ -39,8 +39,16 @@
     </header>
 
     <section>
-      <label for="prenom">Prénom</label>
-      <input name="prenom" type="text" placeholder="..." required>
+      <form action="" method="GET" class="contact-form">
+        <div>
+          <label for="prenom" style="display: none;">Prénom</label>
+          <input id="prenom" name="prenom" type="text" placeholder="Prénom" required>
+        </div>
+        <div>
+          <label for="nom" style="display: none;">Nom</label>
+          <input id="nom" name="nom" type="text" placeholder="Nom" required>
+        </div>
+      </form>
     </section>
   </main>
 

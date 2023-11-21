@@ -153,5 +153,4 @@ window.addEventListener('DOMContentLoaded', function () {
     // const projects = getProjects();
     // console.log(projects);
     fillProjectsList();
-
 });
