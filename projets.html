@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/header-style.css">
   <link rel="stylesheet" href="css/projets-style.css">
   <script src="js/github.js"></script>
+  <script src="js/pages/projets.js"></script>
 </head>
 
 <body>
@@ -40,6 +41,22 @@
 
     <section>
       <h1 class="main-title">Mes projets !</h1>
+
+      <div class="filter-button" id="filter-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="filter-svg" viewBox="0 0 16 16">
+          <path
+            d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <div class="filter-dropdown" id="filter-dropdown">
+          <ul>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+            <li>Lorem ipsum</li>
+          </ul>
+        </div>
+      </div>
+
       <ul class="projects-list" id="projects-list">
         <!-- <li class="project">
           <h3 class="project-title">Lorem ipsum</h3>
