@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     this.placeholder = associatedLabel.textContent; // put the label text in the placeholder
                 } else { // if the input is not empty
                     associatedLabel.classList.remove('hidden');
+                    this.placeholder = ""; // Remove the placeholder since label is now displayed
                 }
-                this.placeholder = ""; // Remove the placeholder since label is now displayed
             }
         });
     });
