@@ -63,7 +63,7 @@
               </svg>
               <span>Date décroissante</span>
             </li>
-            <li class="dropdown-item" id="nom-asc">
+            <li class="dropdown-item" id="name-asc">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M10.082 5.629 9.664 7H8.598l1.789-5.332h1.234L13.402 7h-1.12l-.419-1.371h-1.781zm1.57-.785L11 2.687h-.047l-.652 2.157h1.351" />
@@ -72,7 +72,7 @@
               </svg>
               <span>Alphabetique</span>
             </li>
-            <li class="dropdown-item" id="nom-desc">
+            <li class="dropdown-item" id="name-desc">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path d="M12.96 7H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645V7z" />
                 <path fill-rule="evenodd"
@@ -110,8 +110,8 @@
   fitlerBtn.addEventListener("click", fillProjectsList('date', 'asc'));
   const dateDesc = document.getElementById("date-desc");
   fitlerBtn.addEventListener("click", fillProjectsList('date', 'desc'));
-  const nomAsc = document.getElementById("nom-asc");
-  fitlerBtn.addEventListener("click", fillProjectsList('nom', 'asc'));
-  const nomDesc = document.getElementById("nom-desc");
-  fitlerBtn.addEventListener("click", fillProjectsList('nom', 'desc'));
+  const nameAsc = document.getElementById("name-asc");
+  fitlerBtn.addEventListener("click", fillProjectsList('name', 'asc'));
+  const nameDesc = document.getElementById("name-desc");
+  fitlerBtn.addEventListener("click", fillProjectsList('name', 'desc'));
 </script>

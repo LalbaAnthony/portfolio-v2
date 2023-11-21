@@ -71,7 +71,7 @@ async function getProjects(orderby = 'date', order = 'desc') {
 
         // Sort projects
         formattedProjects.sort((a, b) => {
-            if (orderby === 'updated') {
+            if (orderby === 'date') {
                 if (order === 'asc') {
                     return new Date(b.updated_at) - new Date(a.updated_at);
                 } else if (order === 'desc') {

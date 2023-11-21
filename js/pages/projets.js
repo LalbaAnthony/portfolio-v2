@@ -75,7 +75,5 @@ async function fillProjectsList(orderby = 'date', order = 'desc') {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-    // const projects = getProjects();
-    // console.log(projects);
     fillProjectsList('nom', 'desc');
 });
