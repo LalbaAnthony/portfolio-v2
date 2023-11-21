@@ -3,6 +3,7 @@ TODO:
 - [X] Terminer accueil avec reponsive
 - [ ] Faire changer la primary pour s'éloigner de la maquette original
 - [ ] Integrer API github pour voir mes projets
+    - [ ] Faire des tris
 - [ ] Separer les composants avec https://www.w3schools.com/howto/howto_html_include.asp
 - [ ] Faire un menu deroulant pour le header du tel
 - [ ] Ajouter animations a l'affichage et au hover de chaque element

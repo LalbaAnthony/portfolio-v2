@@ -50,16 +50,16 @@ function formatRelativeDate(dateString) {
     return majSentence + timeSentence;
 }
 
-async function getProjects() {
+async function getProjects(orderby = 'name', order = 'asc') {
     try {
+        // Fetch projects
         const response = await fetch(`https://api.github.com/users/${username}/repos`);
-
         if (!response.ok) {
             throw new Error(`Erreur : ${response.status}`);
         }
-
         const projects = await response.json();
 
+        // Format projects
         const formattedProjects = projects.map(project => ({
             name: project.name,
             url: project.html_url,
@@ -69,15 +69,37 @@ async function getProjects() {
             updated_at_relative: formatRelativeDate(project.updated_at),
         }));
 
+        // Sort projects
+        formattedProjects.sort((a, b) => {
+            if (orderby === 'updated') {
+                if (order === 'asc') {
+                    return new Date(b.updated_at) - new Date(a.updated_at);
+                } else if (order === 'desc') {
+                    return new Date(a.updated_at) - new Date(b.updated_at);
+                } else {
+                    return 0;
+                }
+            } else if (orderby === 'name') {
+                if (order === 'asc') {
+                    return a.name.localeCompare(b.name);
+                } else if (order === 'desc') {
+                    return b.name.localeCompare(a.name);
+                }
+                else {
+                    return 0;
+                }
+            } else {
+                return 0;
+            }
+        });
+
         return formattedProjects;
+
     } catch (error) {
         console.error('Erreur :', error.message);
         return [];
     }
 }
-
-// const projects = getProjects();
-// console.log(projects);
 
 async function fillProjectsList() {
 
@@ -128,5 +150,8 @@ async function fillProjectsList() {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
+    // const projects = getProjects();
+    // console.log(projects);
     fillProjectsList();
+
 });
