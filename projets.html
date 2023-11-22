@@ -106,12 +106,14 @@
 </html>
 
 <script>
-  const dateAsc = document.getElementById("date-asc");
-  fitlerBtn.addEventListener("click", fillProjectsList('date', 'asc'));
-  const dateDesc = document.getElementById("date-desc");
-  fitlerBtn.addEventListener("click", fillProjectsList('date', 'desc'));
-  const nameAsc = document.getElementById("name-asc");
-  fitlerBtn.addEventListener("click", fillProjectsList('name', 'asc'));
-  const nameDesc = document.getElementById("name-desc");
-  fitlerBtn.addEventListener("click", fillProjectsList('name', 'desc'));
+  window.addEventListener('DOMContentLoaded', function () {
+    const dateAscEl = document.getElementById("date-asc");
+    dateAscEl.addEventListener("click", function () { fillProjectsList('date', 'asc'); closeFilters(); });
+    const dateDescEl = document.getElementById("date-desc");
+    dateDescEl.addEventListener("click", function () { fillProjectsList('date', 'desc'); closeFilters(); });
+    const nameAscEl = document.getElementById("name-asc");
+    nameAscEl.addEventListener("click", function () { fillProjectsList('name', 'asc'); closeFilters(); });
+    const nameDescEl = document.getElementById("name-desc");
+    nameDescEl.addEventListener("click", function () { fillProjectsList('name', 'desc'); closeFilters(); });
+  });
 </script>

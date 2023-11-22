@@ -1,24 +1,12 @@
-
-window.addEventListener('DOMContentLoaded', function () {
-    const fitlerBtn = document.getElementById("filter-button");
-    fitlerBtn.addEventListener("click", toggleFilters);
-});
-
-function toggleFilters() {
+function isFilterOpen() {
     const filterDropdown = document.getElementById("filter-dropdown");
-    if (filterDropdown.classList.contains("open")) {
-        filterDropdown.classList.remove("open");
-    }
-    else {
-        filterDropdown.classList.add("open");
-        setTimeout(() => { closeFilters() }, "5000");
-    }
+    const isOpen = filterDropdown.classList.contains("open");
+    return isOpen;
 }
 
 function openFilters() {
     const filterDropdown = document.getElementById("filter-dropdown");
     filterDropdown.classList.add("open");
-    setTimeout(() => { closeFilters() }, "5000");
 }
 
 function closeFilters() {
@@ -26,11 +14,36 @@ function closeFilters() {
     filterDropdown.classList.remove("open");
 }
 
-async function fillProjectsList(orderby = 'date', order = 'desc') {
+function toggleFilters() {
+    if (!isFilterOpen()) {
+        openFilters();
+    }
+    else {
+        closeFilters();
+        // setTimeout(() => { closeFilters() }, "5000");
+    }
+}
 
+window.addEventListener('DOMContentLoaded', function () {
+    const fitlerBtn = document.getElementById("filter-button");
+    fitlerBtn.addEventListener("click", toggleFilters);
+});
+
+function clearProjectList() {
     const projectsList = document.getElementById('projects-list');
-    const projects = await getProjects(orderby, order);
+    projectsList.innerHTML = '';
+}
 
+async function fillProjectsList(orderby = 'date', order = 'desc') {
+    const projectsList = document.getElementById('projects-list');
+
+    // Clear the projects list
+    if (projectsList.innerHTML) {
+        clearProjectList();
+    }
+
+    // Get projects & fill the list
+    const projects = await getProjects(orderby, order);
     projects.forEach(project => {
         // Create list item
         const listItem = document.createElement('li');
@@ -72,6 +85,11 @@ async function fillProjectsList(orderby = 'date', order = 'desc') {
         // Append the list item to the projects list
         projectsList.appendChild(listItem);
     });
+
+    // Close filters if open
+    if (isFilterOpen()) {
+        closeFilters();
+    }
 }
 
 window.addEventListener('DOMContentLoaded', function () {

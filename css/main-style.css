@@ -108,7 +108,7 @@ section {
 
 .pill {
   background-color: var(--primary);
-  color: var(--light);
+  color: white;
   padding: 0 5px;
   border-radius: 25px;
 }
