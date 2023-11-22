@@ -4,23 +4,33 @@ function isFilterOpen() {
     return isOpen;
 }
 
+function closeIfOutside(event) {
+    const filterDropdown = document.getElementById("filter-dropdown");
+    const filterButton = document.getElementById("filter-button");
+    if (!filterDropdown.contains(event.target) && !filterButton.contains(event.target)) {
+        closeFilters();
+    }
+}
+
 function openFilters() {
     const filterDropdown = document.getElementById("filter-dropdown");
     filterDropdown.classList.add("open");
+    document.addEventListener("click", closeIfOutside);
 }
 
 function closeFilters() {
     const filterDropdown = document.getElementById("filter-dropdown");
     filterDropdown.classList.remove("open");
+    document.removeEventListener("click", closeIfOutside);
 }
 
 function toggleFilters() {
     if (!isFilterOpen()) {
         openFilters();
+        setTimeout(() => { closeFilters() }, "10000");
     }
     else {
         closeFilters();
-        // setTimeout(() => { closeFilters() }, "5000");
     }
 }
 
