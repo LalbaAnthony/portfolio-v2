@@ -26,28 +26,27 @@ function formatRelativeDate(dateString) {
     const hoursDifference = Math.floor(minutesDifference / 60);
     const daysDifference = Math.floor(hoursDifference / 24);
     const weeksDifference = Math.floor(daysDifference / 7);
-    const majSentence = 'Mise à jour '
     let timeSentence = ''
     if (weeksDifference >= 2) {
-        timeSentence = `il y a ${weeksDifference} semaines`;
+        timeSentence = `Il y a ${weeksDifference} semaines`;
     } else if (weeksDifference === 1) {
-        timeSentence = 'il y a une semaine';
+        timeSentence = 'Il y a une semaine';
     } else if (daysDifference >= 2) {
-        timeSentence = `il y a ${daysDifference} jours`;
+        timeSentence = `Il y a ${daysDifference} jours`;
     } else if (daysDifference === 1) {
-        timeSentence = 'hier';
+        timeSentence = 'Iier';
     } else if (hoursDifference >= 2) {
-        timeSentence = `il y a ${hoursDifference} heures`;
+        timeSentence = `Il y a ${hoursDifference} heures`;
     } else if (hoursDifference === 1) {
-        timeSentence = 'il y a une heure';
+        timeSentence = 'Il y a une heure';
     } else if (minutesDifference >= 2) {
-        timeSentence = `il y a ${minutesDifference} minutes`;
+        timeSentence = `Il y a ${minutesDifference} minutes`;
     } else if (minutesDifference === 1) {
-        timeSentence = 'il y a une minute';
+        timeSentence = 'Il y a une minute';
     } else {
-        timeSentence = 'à l\'instant';
+        timeSentence = 'A l\'instant';
     }
-    return majSentence + timeSentence;
+    return timeSentence;
 }
 
 async function getProjects(orderby = 'date', order = 'desc') {

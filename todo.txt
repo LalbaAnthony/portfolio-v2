@@ -1,10 +1,10 @@
 TODO:
 - [X] Fixer le hover des buttons
 - [X] Terminer accueil avec reponsive
-- [ ] Faire changer la primary pour s'éloigner de la maquette original
+- [X] Refaire le style des titres de page
 - [ ] Pages projet:
     - [X] Avec pastilles
-    - [ ] Message pas de projets chargé
+    - [ ] Message pas de projets chargé / roue de chargement
     - [ ] Fixer les last update dates toute similaire
 - [ ] Page contact:
     - [ ] Terminer le style

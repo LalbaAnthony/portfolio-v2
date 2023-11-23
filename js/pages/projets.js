@@ -44,6 +44,11 @@ function clearProjectList() {
     projectsList.innerHTML = '';
 }
 
+function hideLoader() {
+    const loader = document.getElementById('loader-container');
+    loader.classList.add('hidden');
+}
+
 async function fillProjectsList(orderby = 'date', order = 'desc') {
     const projectsList = document.getElementById('projects-list');
 
@@ -54,6 +59,10 @@ async function fillProjectsList(orderby = 'date', order = 'desc') {
 
     // Get projects & fill the list
     const projects = await getProjects(orderby, order);
+
+    // Hide loader
+    hideLoader();
+
     projects.forEach(project => {
         // Create list item
         const listItem = document.createElement('li');
