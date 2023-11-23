@@ -2,9 +2,16 @@ TODO:
 - [X] Fixer le hover des buttons
 - [X] Terminer accueil avec reponsive
 - [ ] Faire changer la primary pour s'éloigner de la maquette original
-- [ ] Integrer API github pour voir mes projets
-    - [ ] Avec pastilles
+- [ ] Pages projet:
+    - [X] Avec pastilles
     - [ ] Message pas de projets chargé
+    - [ ] Fixer les last update dates toute similaire
+- [ ] Page contact:
+    - [ ] Terminer le style
+    - [ ] Faire adresse mail ou tel avec ou au centre
+- [ ] Page skills:
+    - [ ] Rempli automatiquement depuis json pour le rendre administrable
+    - [ ] Faire tri avec pastilles
 - [ ] Separer les composants avec https://www.w3schools.com/howto/howto_html_include.asp
 - [ ] Faire un menu deroulant pour le header du tel
 - [ ] Ajouter animations a l'affichage et au hover de chaque element
