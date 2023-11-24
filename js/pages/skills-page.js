@@ -1,123 +1,76 @@
-function isFilterOpen() {
-    const filterDropdown = document.getElementById("filter-dropdown");
-    const isOpen = filterDropdown.classList.contains("open");
-    return isOpen;
+function clearSkillsList() {
+    const skillsList = document.getElementById('skills-list');
+    skillsList.innerHTML = '';
 }
+async function fillSkillsList() {
+    const skillsList = document.getElementById('skills-list');
 
-function closeIfOutside(event) {
-    const filterDropdown = document.getElementById("filter-dropdown");
-    const filterButton = document.getElementById("filter-button");
-    if (!filterDropdown.contains(event.target) && !filterButton.contains(event.target)) {
-        closeFilters();
-    }
-}
-
-function openFilters() {
-    const filterDropdown = document.getElementById("filter-dropdown");
-    filterDropdown.classList.add("open");
-    document.addEventListener("click", closeIfOutside);
-}
-
-function closeFilters() {
-    const filterDropdown = document.getElementById("filter-dropdown");
-    filterDropdown.classList.remove("open");
-    document.removeEventListener("click", closeIfOutside);
-}
-
-function toggleFilters() {
-    if (!isFilterOpen()) {
-        openFilters();
-        setTimeout(() => { closeFilters() }, "10000");
-    }
-    else {
-        closeFilters();
-    }
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-    const fitlerBtn = document.getElementById("filter-button");
-    fitlerBtn.addEventListener("click", toggleFilters);
-});
-
-function clearProjectList() {
-    const projectsList = document.getElementById('projects-list');
-    projectsList.innerHTML = '';
-}
-
-function hideLoader() {
-    const loader = document.getElementById('loader-container');
-    loader.classList.add('hidden');
-}
-
-async function fillProjectsList(orderby = 'date', order = 'desc') {
-    const projectsList = document.getElementById('projects-list');
-
-    // Clear the projects list
-    if (projectsList.innerHTML) {
-        clearProjectList();
+    // Clear the skills list
+    if (skillsList.innerHTML) {
+        clearSkillsList();
     }
 
-    // Get projects & fill the list
-    const projects = await getProjects(orderby, order);
+    // Get skills & fill the list
+    const skills = await getSkills();
 
-    // Hide loader
-    hideLoader();
-
-    projects.forEach(project => {
+    skills.forEach(skill => {
         // Create list item
         const listItem = document.createElement('li');
-        listItem.classList.add('project');
+        listItem.classList.add('skill');
 
-        // Create project title
+        // Create skill title
         const title = document.createElement('h3');
-        title.classList.add('project-title');
-        title.textContent = project.name;
+        title.classList.add('skill-title');
+        title.textContent = skill.name;
 
-        // Create language pill inside a span
-        const languageContainer = document.createElement('span');
+        // Create language pill
         const languagePill = document.createElement('div');
         languagePill.classList.add('pill');
-        languagePill.style.backgroundColor = project.language_color;
-        languagePill.textContent = project.language;
-        languageContainer.appendChild(languagePill);
-        
-        // Create project infos container
-        const infosContainer = document.createElement('div');
-        infosContainer.classList.add('project-infos');
-        
-        // Create relative update time span
-        const updateSpan = document.createElement('span');
-        updateSpan.classList.add('update-date');
-        updateSpan.textContent = project.pushed_at_relative;
-        
+        languagePill.style.backgroundColor = skill.category.color ? skill.category.color : '--primary';
+        languagePill.textContent = skill.category.name;
+
+        // Create title block
+        const titleBlock = document.createElement('div');
+        titleBlock.classList.add('title-block');
+        titleBlock.appendChild(title);
+        titleBlock.appendChild(languagePill);
+
+        // Create range container
+        const rangeContainer = document.createElement('div');
+        rangeContainer.classList.add('empty-range');
+        const fulfilledRange = document.createElement('div');
+        fulfilledRange.classList.add('fulfilled-range');
+        fulfilledRange.classList.add(`percentage-${skill.ratingOutOfTen * 10}`);
+        rangeContainer.appendChild(fulfilledRange);
+
+        // Create numbers sentence span
+        const numberSentence = document.createElement('span');
+        numberSentence.classList.add('numbers-sentence');
+        // TODO: Need to improve this shit because this is shit
+        let sentence = '';
+        if (skill.numberOfProjects && skill.category.id === 1) sentence = `Dans ${skill.numberOfProjects} projets`;
+        if (diffDateNow(skill.since)) {
+            if (skill.numberOfProjects && skill.category.id === 1) sentence = sentence + `, depuis ${diffDateNow(skill.since)}`;
+            else sentence = `Depuis ${diffDateNow(skill.since)}`;
+        }
+        numberSentence.textContent = sentence;
+
         // Create sr-only span for screen readers
         const srOnly = document.createElement('span');
         srOnly.classList.add('sr-only');
-        srOnly.textContent = `Projet "${project.name}", realisé en ${project.language} et mis à jour ${project.pushed_at_relative}`;
+        srOnly.textContent = `Je maitrise le "${skill.name}" sur une note de ${skill.ratingOutOfTen} sur 10`;
 
         // Append elements to the list item
-        infosContainer.appendChild(languageContainer);
-        infosContainer.appendChild(updateSpan);
-        
-        listItem.appendChild(title);
-        listItem.appendChild(infosContainer);
+        listItem.appendChild(titleBlock);
+        listItem.appendChild(rangeContainer);
+        listItem.appendChild(numberSentence);
         listItem.appendChild(srOnly);
 
-        // Append elements to the list item
-        listItem.addEventListener("click", function () {
-            window.open(project.url);
-        });
-
-        // Append the list item to the projects list
-        projectsList.appendChild(listItem);
+        // Append the list item to the skills list
+        skillsList.appendChild(listItem);
     });
-
-    // Close filters if open
-    if (isFilterOpen()) {
-        closeFilters();
-    }
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-    fillProjectsList('date', 'asc');
+    fillSkillsList();
 });

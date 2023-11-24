@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function () {
     fitlerBtn.addEventListener("click", toggleFilters);
 });
 
-function clearProjectList() {
+function clearProjectsList() {
     const projectsList = document.getElementById('projects-list');
     projectsList.innerHTML = '';
 }
@@ -54,7 +54,7 @@ async function fillProjectsList(orderby = 'date', order = 'desc') {
 
     // Clear the projects list
     if (projectsList.innerHTML) {
-        clearProjectList();
+        clearProjectsList();
     }
 
     // Get projects & fill the list
