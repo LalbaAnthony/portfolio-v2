@@ -9,6 +9,6 @@ function setPrimaryColor(color) {
     r.style.setProperty('--primary', color);
 }
 
-window.addEventListener('DOMContentLoaded', function () {
-    // setPrimaryColor('#01eefe'); // set to blue
-});
+// ? window.addEventListener('DOMContentLoaded', function () {
+// ?     setPrimaryColor('#01eefe'); // set to blue
+// ? });

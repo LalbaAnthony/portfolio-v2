@@ -48,12 +48,19 @@ async function fillCompetencesList() {
         numberSentence.classList.add('numbers-sentence');
         // TODO: Need to improve this shit because this is shit
         let sentence = '';
-        if (competence.numberOfProjects && competence.category.id === 1) sentence = `Dans ${competence.numberOfProjects} projets`;
-        if (diffDateNow(competence.since)) {
-            if (competence.numberOfProjects && competence.category.id === 1) sentence = sentence + `, depuis ${diffDateNow(competence.since)}`;
-            else sentence = `Depuis ${diffDateNow(competence.since)}`;
+        if (diffDateNow(competence.since)) sentence = `Depuis ${diffDateNow(competence.since)}`;
+        if (competence.numberOfProjects && competence.category.id === 1) {
+            if (diffDateNow(competence.since)) sentence = sentence + `, dans ${competence.numberOfProjects} projets`;
+            else sentence = `Dans ${competence.numberOfProjects} projets`;
         }
         numberSentence.textContent = sentence;
+        // let sentence = '';
+        // if (competence.numberOfProjects && competence.category.id === 1) sentence = `Dans ${competence.numberOfProjects} projets`;
+        // if (diffDateNow(competence.since)) {
+        //     if (competence.numberOfProjects && competence.category.id === 1) sentence = sentence + `, depuis ${diffDateNow(competence.since)}`;
+        //     else sentence = `Depuis ${diffDateNow(competence.since)}`;
+        // }
+        // numberSentence.textContent = sentence;
 
         // Create sr-only span for screen readers
         const srOnly = document.createElement('span');
