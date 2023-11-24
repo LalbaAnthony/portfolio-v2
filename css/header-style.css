@@ -25,6 +25,7 @@
 
   .header-list {
     margin: 0.5rem 0 0 0;
+    flex-wrap: wrap;
   }
 }
 
@@ -33,8 +34,8 @@
   align-items: center;
 }
 
-.header-list li:not(:first-child) {
-  margin: 0 0 0 2rem;
+.header-list>li {
+  margin: 0 1rem;
 }
 
 .header-list-item>a {

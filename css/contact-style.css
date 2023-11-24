@@ -1,14 +1,42 @@
 @charset "UTF-8";
 
-.contact-form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+.contact-form {
+  margin: 0 2rem;
 }
 
-.contact-form-grid>* {
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto; /* Auto row sizing for content */
+  gap: 15px;
+}
+
+/* .contact-form-grid>* {
   margin: 0 auto;
   width: auto;
+} */
+
+.third-column {
+  grid-column: span 3;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .third-column {
+    grid-column: span 1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-form-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .third-column {
+    grid-column: span 2;
+  }
 }
 
 input[type=text],

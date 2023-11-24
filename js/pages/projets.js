@@ -80,21 +80,27 @@ async function fillProjectsList(orderby = 'date', order = 'desc') {
         languagePill.style.backgroundColor = project.language_color;
         languagePill.textContent = project.language;
         languageContainer.appendChild(languagePill);
-
+        
         // Create project infos container
         const infosContainer = document.createElement('div');
         infosContainer.classList.add('project-infos');
-
+        
         // Create relative update time span
         const updateSpan = document.createElement('span');
-        updateSpan.textContent = project.updated_at_relative;
+        updateSpan.textContent = project.pushed_at_relative;
+        
+        // Create sr-only span for screen readers
+        const srOnly = document.createElement('span');
+        srOnly.classList.add('sr-only');
+        srOnly.textContent = `Projet "${project.name}", realisé en ${project.language} et mis à jour ${project.pushed_at_relative}`;
 
         // Append elements to the list item
         infosContainer.appendChild(languageContainer);
         infosContainer.appendChild(updateSpan);
-
+        
         listItem.appendChild(title);
         listItem.appendChild(infosContainer);
+        listItem.appendChild(srOnly);
 
         // Append elements to the list item
         listItem.addEventListener("click", function () {
@@ -112,5 +118,5 @@ async function fillProjectsList(orderby = 'date', order = 'desc') {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-    fillProjectsList('nom', 'desc');
+    fillProjectsList('date', 'asc');
 });

@@ -64,17 +64,17 @@ async function getProjects(orderby = 'date', order = 'desc') {
             url: project.html_url,
             language: project.language,
             language_color: getColorFromLanguage(project.language),
-            updated_at: project.updated_at,
-            updated_at_relative: formatRelativeDate(project.updated_at),
+            pushed_at: project.pushed_at,
+            pushed_at_relative: formatRelativeDate(project.pushed_at),
         }));
 
         // Sort projects
         formattedProjects.sort((a, b) => {
             if (orderby === 'date') {
                 if (order === 'asc') {
-                    return new Date(b.updated_at) - new Date(a.updated_at);
+                    return new Date(b.pushed_at) - new Date(a.pushed_at);
                 } else if (order === 'desc') {
-                    return new Date(a.updated_at) - new Date(b.updated_at);
+                    return new Date(a.pushed_at) - new Date(b.pushed_at);
                 } else {
                     return 0;
                 }
