@@ -6,11 +6,18 @@ TODO:
     - [X] Avec pastilles
     - [X] Fixer les last update dates toute similaire
     - [X] Message pas de projets chargé / roue de chargement
+- [ ] Rajouter breakpoint avec tablette partout
 - [ ] Page contact:
     - [ ] Terminer le style
     - [ ] Faire adresse mail ou tel avec ou au centre
 - [ ] Page skills:
     - [ ] Rempli automatiquement depuis json pour le rendre administrable
+    - [ ] Cartes skills:
+        - [ ] Nom
+        - [ ] Note sur 100
+        - [ ] Categorie (language, outils, logiciel, os, norme(uml, ...), ...)
+        - [ ] Nombre de projets
+        - [ ] Nombre de mois d'xp (converti auto en années)
     - [ ] Faire tri avec pastilles
 - [ ] Separer les composants avec https://www.w3schools.com/howto/howto_html_include.asp
 - [ ] Faire un menu deroulant pour le header du tel
