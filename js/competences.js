@@ -6,7 +6,7 @@ const categories = [
     },
     {
         id: 2,
-        name: 'Outils',
+        name: 'Outil',
         color: '#e74c3c',
     },
     {
@@ -36,7 +36,7 @@ const categories = [
     },
 ];
 
-const skills = [
+const competences = [
     {
         id: 1,
         name: 'HTML',
@@ -111,7 +111,7 @@ const skills = [
     },
     {
         id: 10,
-        name: 'Modèles de données (UML)',
+        name: 'UML',
         category: 5,
         numberOfProjects: '6',
         since: '2021',
@@ -167,7 +167,7 @@ const skills = [
     },
     {
         id: 17,
-        name: 'WordPress',
+        name: 'WordPress Headless',
         category: 3,
         numberOfProjects: 'beaucoup trop de',
         since: '2022',
@@ -189,9 +189,15 @@ const skills = [
         since: '2022',
         ratingOutOfTen: 7,
     },
+    {
+        id: 19,
+        name: 'phpMyAdmin',
+        category: 2,
+        numberOfProjects: 'presque tous mes',
+        since: '2021',
+        ratingOutOfTen: 9,
+    },
 ];
-
-
 
 function diffDateNow(date) {
     const inputDate = new Date(date);
@@ -223,20 +229,37 @@ function getCategories() {
     return categories;
 }
 
-function getSkillById(skillId) {
-    return skills.find(skill => skill.id === skillId);
+function getCompetenceById(competenceId) {
+    return competences.find(competence => competence.id === competenceId);
 }
 
-function getSkills() {
-    const skillsWithCategories = skills.map(skill => {
-        const category = getCategoryById(skill.category);
+function getCompetences(orderBy = 'categoryName', order = 'asc') {
+    const competencesWithCategories = competences.map(competence => {
+        const category = getCategoryById(competence.category);
         return {
-            ...skill,
+            ...competence,
             category: category,
-            sinceSentence: diffDateNow(skill.since),
+            sinceSentence: diffDateNow(competence.since),
         };
     });
-    return skillsWithCategories;
+
+    competencesWithCategories.sort((a, b) => {
+        if (order === 'asc') {
+            if (orderBy === 'categoryName') {
+                return a.category.name.localeCompare(b.category.name);
+            } else {
+                return a[orderBy] - b[orderBy];
+            }
+        } else if (order === 'desc') {
+            if (orderBy === 'categoryName') {
+                return b.category.name.localeCompare(a.category.name);
+            } else {
+                return b[orderBy] - a[orderBy];
+            }
+        }
+    });
+
+    return competencesWithCategories;
 }
 
-console.log(getSkills());
+console.log(getCompetences());

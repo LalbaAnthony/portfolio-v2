@@ -10,11 +10,13 @@ TODO:
 - [ ] Page contact:
     - [ ] Terminer le style
     - [ ] Faire adresse mail ou tel avec ou au centre
-- [ ] Page skills:
+- [ ] Page competence:
     - [ ] Rempli automatiquement depuis json pour le rendre administrable
     - [ ] Faire des filtres pastilles avec les categories
-    - [ ] Faire deux fichiers ou ya que les listes (categories + skills)
-    - [X] Cartes skills:
+    - [ ] Faire deux fichiers ou ya que les listes (categories + competences)
+    - [X] Remplacer "Skills" par "Competences"
+    - [X] Ajouter competences depuis CV
+    - [X] Cartes competences:
         - [X] Nom
         - [X] Note sur 100
         - [X] Categorie (language, outils, logiciel, os, norme(uml, ...), ...)
