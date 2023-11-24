@@ -54,7 +54,7 @@
     }
 }
 
- /* DESKTOP */
+/* DESKTOP */
 @media (min-width: 1024px) {
     .projects-list {
         display: grid;
@@ -111,8 +111,11 @@
     margin: 0.5rem 0;
     display: flex;
     gap: 15px;
-    font-size: small;
     text-align: center;
+}
+
+.update-date {
+    font-size: small;
 }
 
 .loader-container {

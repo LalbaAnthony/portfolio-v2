@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+:root {
+  --primary: #01eefe;
+  --dark: #20242D;
+  --light: #ffffff;
+}
+
+/* * {
+  box-shadow: 0 0 0 3px red;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Code for Firefox */
+::-moz-selection {
+  color: var(--dark);
+  background: var(--light);
+}
+
+::selection {
+  color: var(--dark);
+  background: var(--light);
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  color: var(--light);
+  background-color: var(--dark);
+  background: linear-gradient(0deg, var(--primary) -50%, var(--dark) 70%);
+  background-attachment: fixed;
+}
+
+h1,
+h2 {
+  font-family: Kanit;
+}
+
+main {
+  background-color: var(--dark);
+  border-radius: 25px;
+  box-shadow:
+    /* top shadow */
+    0px -10px 30px rgba(0, 0, 0, 0.4),
+    /* right shadow */
+    10px 0px 30px rgba(0, 0, 0, 0.4),
+    /* left shadow */
+    -10px 0px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  main {
+    margin: 2rem 4rem;
+    padding: 2rem 6rem;
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    margin: 2rem 2rem;
+    padding: 2rem 3rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  main {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+section {
+  margin: 4rem 0;
+}
+
+.main-title {
+  text-align: center;
+  margin: 0 0 2rem 0;
+  font-size: x-large;
+  font-family: Poppins !important;
+}
+
+.primary-button {
+  color: var(--dark);
+  background-color: var(--primary);
+  border: var(--dark) 1px solid;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: smaller;
+  transition: all 0.2s;
+}
+
+.primary-button:hover {
+  color: var(--primary);
+  background-color: var(--dark);
+  border: var(--primary) 1px solid;
+}
+
+.poppins {
+  font-family: Poppins !important;
+}
+
+.kanit {
+  font-family: Kanit !important;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.pill {
+  background-color: var(--primary);
+  color: white;
+  padding: 0 5px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: small;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

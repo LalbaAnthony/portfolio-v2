@@ -87,6 +87,7 @@ async function fillProjectsList(orderby = 'date', order = 'desc') {
         
         // Create relative update time span
         const updateSpan = document.createElement('span');
+        updateSpan.classList.add('update-date');
         updateSpan.textContent = project.pushed_at_relative;
         
         // Create sr-only span for screen readers
