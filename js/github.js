@@ -34,7 +34,7 @@ function formatRelativeDate(dateString) {
     } else if (daysDifference >= 2) {
         timeSentence = `Il y a ${daysDifference} jours`;
     } else if (daysDifference === 1) {
-        timeSentence = 'Iier';
+        timeSentence = 'Hier';
     } else if (hoursDifference >= 2) {
         timeSentence = `Il y a ${hoursDifference} heures`;
     } else if (hoursDifference === 1) {
