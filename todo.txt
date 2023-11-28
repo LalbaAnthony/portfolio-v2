@@ -10,6 +10,7 @@ TODO:
 - [ ] Page contact:
     - [ ] Terminer le style
     - [ ] Faire adresse mail ou tel avec ou au centre
+- [ ] Page parcours
 - [ ] Page competence:
     - [ ] Faire des filtres pastilles avec les categories
     - [X] Faire deux fichiers ou ya que les listes (categories + competences)

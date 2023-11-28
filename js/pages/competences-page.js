@@ -26,7 +26,7 @@ async function fillCompetencesList() {
         // Create language pill
         const languagePill = document.createElement('div');
         languagePill.classList.add('pill');
-        languagePill.style.backgroundColor = competence.category.color ? competence.category.color : '--primary';
+        languagePill.style.backgroundColor = competence.category.color ? competence.category.color : 'var(--primary)';
         languagePill.textContent = competence.category.name;
 
         // Create title block
