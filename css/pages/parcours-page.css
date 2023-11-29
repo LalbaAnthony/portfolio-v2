@@ -100,3 +100,14 @@
         border-color: transparent var(--primary) transparent transparent;
     }
 }
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+img.logo-business {
+    width: 60px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
