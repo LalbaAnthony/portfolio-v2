@@ -2,6 +2,7 @@ TODO:
 - [X] Fixer le hover des buttons
 - [X] Terminer accueil avec reponsive
 - [X] Refaire le style des titres de page
+- [X] Changer style des elements selectionnés du header 
 - [X] Pages projet:
     - [X] Avec pastilles
     - [X] Fixer les last update dates toute similaire
