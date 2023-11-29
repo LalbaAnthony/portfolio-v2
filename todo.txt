@@ -13,8 +13,8 @@ TODO:
 - [] Page parcours:
     - [ ] Fix bug affichage logo
     - [ ] Prendre moins de vide sur mobile
-    - [ ] Fade sur les bout de la ligne centrale
     - [ ] Mettre animation sur le lien
+    - [X] Fade sur les bout de la ligne centrale
 - [ ] Page competence:
     - [ ] Faire des filtres pastilles avec les categories
     - [X] Faire deux fichiers ou ya que les listes (categories + competences)
