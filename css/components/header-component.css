@@ -44,7 +44,11 @@
   transition: transform 0.3s;
 }
 
-.header-list-item>a:hover {
+.header-list-item.selected>a {
+  color: var(--primary);
+}
+
+.header-list-item:not(.selected)>a:hover {
   color: var(--primary);
   transform: translateX(-5px);
 }
