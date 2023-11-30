@@ -8,6 +8,7 @@ TODO:
     - [X] Fixer les last update dates toute similaire
     - [X] Message pas de projets chargé / roue de chargement
 - [ ] Rajouter breakpoint avec tablette partout
+- [ ] Improve ls tyle des main-title
 - [ ] Reduire les bordures sur mobile
 - [ ] Page contact:
     - [ ] Terminer le style

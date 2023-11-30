@@ -58,7 +58,7 @@ async function fillCompetencesList() {
         // Create sr-only span for screen readers
         const srOnly = document.createElement('span');
         srOnly.classList.add('sr-only');
-        srOnly.textContent = `Je maitrise le "${competence.name}" sur une note de ${competence.ratingOutOfTen} sur 10`;
+        srOnly.textContent = `Je maitrise le ${competence.name} sur une note de ${competence.ratingOutOfTen} sur 10`;
 
         // Append elements to the list item
         listItem.appendChild(titleBlock);
