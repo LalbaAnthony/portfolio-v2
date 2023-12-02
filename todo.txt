@@ -9,7 +9,7 @@ TODO:
     - [X] Fixer les last update dates toute similaire
     - [X] Message pas de projets chargé / roue de chargement
 - [ ] Rajouter breakpoint avec tablette partout
-- [ ] Improve ls tyle des main-title
+- [ ] Improve les tyle des main-title
 - [ ] Page contact:
     - [ ] Terminer le style
     - [ ] Faire adresse mail ou tel avec ou au centre

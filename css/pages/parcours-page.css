@@ -109,6 +109,6 @@
 img.logo-business {
     /* margin: auto; */
     width: 60px;
+    height: 60px;
     border-radius: 50%;
-    aspect-ratio: 1;
 }
