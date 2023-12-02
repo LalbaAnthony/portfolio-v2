@@ -79,8 +79,8 @@ main {
 /* MOBILE */
 @media (max-width: 767px) {
   main {
-    margin: 2rem 1rem;
-    padding: 2rem 1.5rem;
+    margin: 1rem 0.5rem;
+    padding: 2rem 1rem;
   }
 }
 
