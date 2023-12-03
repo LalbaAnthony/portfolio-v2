@@ -9,6 +9,7 @@ TODO:
     - [X] Avec pastilles
     - [X] Fixer les last update dates toute similaire
     - [X] Message pas de projets chargé / roue de chargement
+- [ ] Réduire le padding des elemnt projet/competences sur mobile
 - [ ] Page contact:
     - [ ] Terminer le style
     - [ ] Faire adresse mail ou tel avec ou au centre
