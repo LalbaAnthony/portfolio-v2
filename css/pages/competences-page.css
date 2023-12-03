@@ -5,7 +5,7 @@
 @media (min-width: 1024px) {
     .competences-list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 }
@@ -69,6 +69,7 @@
     width: 50%;
     background-color: var(--primary);
     border-radius: 25px 0 0 25px;
+    border-right: 3px solid var(--dark);
 }
 
 .fulfilled-range.percentage-10 {

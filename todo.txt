@@ -4,19 +4,18 @@ TODO:
 - [X] Refaire le style des titres de page
 - [X] Changer style des elements selectionnés du header 
 - [X] Reduire les bordures sur mobile
+- [X] Improve les tyle des main-title
 - [X] Pages projet:
     - [X] Avec pastilles
     - [X] Fixer les last update dates toute similaire
     - [X] Message pas de projets chargé / roue de chargement
-- [ ] Rajouter breakpoint avec tablette partout
-- [ ] Improve les tyle des main-title
 - [ ] Page contact:
     - [ ] Terminer le style
     - [ ] Faire adresse mail ou tel avec ou au centre
 - [] Page parcours:
-    - [ ] Fix bug affichage logo
     - [ ] Prendre moins de vide sur mobile
     - [ ] Mettre animation sur le lien
+    - [X] Fix bug affichage logo
     - [X] Fade sur les bout de la ligne centrale
 - [ ] Page competence:
     - [ ] Faire des filtres pastilles avec les categories

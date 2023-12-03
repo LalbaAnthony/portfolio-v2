@@ -32,6 +32,6 @@ const categories = [
     {
         id: 10,
         name: 'Autres',
-        color: '#f1c40f',
+        color: '#ffcc00',
     },
 ];

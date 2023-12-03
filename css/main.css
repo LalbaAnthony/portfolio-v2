@@ -95,6 +95,30 @@ section {
   font-family: Poppins !important;
 }
 
+.main-title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: var(--primary);
+  margin: 0.5rem auto;
+  opacity: 1;
+  animation-name: slideAndOpacity;
+  animation-duration: 0.3s;
+}
+
+@keyframes slideAndOpacity {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 .primary-button {
   color: var(--dark);
   background-color: var(--primary);

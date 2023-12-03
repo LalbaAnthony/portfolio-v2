@@ -46,7 +46,6 @@ async function fillCompetencesList() {
         // Create numbers sentence span
         const numberSentence = document.createElement('span');
         numberSentence.classList.add('numbers-sentence');
-        // TODO: Need to improve this shit because this shit is shit
         let sentence = '';
         if (diffDateNow(competence.since)) sentence = `Depuis ${diffDateNow(competence.since)}`;
         if (competence.numberOfProjects && competence.category.id === 1) {
@@ -58,7 +57,7 @@ async function fillCompetencesList() {
         // Create sr-only span for screen readers
         const srOnly = document.createElement('span');
         srOnly.classList.add('sr-only');
-        srOnly.textContent = `Je maitrise le ${competence.name} sur une note de ${competence.ratingOutOfTen} sur 10`;
+        srOnly.textContent = `Je maitrise ${competence.name} sur une note de ${competence.ratingOutOfTen} sur 10`;
 
         // Append elements to the list item
         listItem.appendChild(titleBlock);
