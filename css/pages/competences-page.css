@@ -69,7 +69,7 @@
     width: 50%;
     background-color: var(--primary);
     border-radius: 25px 0 0 25px;
-    border-right: 3px solid var(--dark);
+    /* border-right: 3px solid var(--dark); */
 }
 
 .fulfilled-range.percentage-10 {

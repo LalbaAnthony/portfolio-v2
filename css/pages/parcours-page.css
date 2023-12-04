@@ -76,12 +76,12 @@
 /* MOBILE */
 @media (max-width: 767px) {
     .timeline::after {
-        left: 90px;
+        left: 40px;
     }
 
     .container {
         width: 100%;
-        padding-left: 120px;
+        padding-left: 70px;
         padding-right: 30px;
     }
 
@@ -91,12 +91,12 @@
 
     .container.left::after,
     .container.right::after {
-        left: 82px;
+        left: 32px;
     }
 
     .container.left::before,
     .container.right::before {
-        left: 100px;
+        left: 48px;
         border-color: transparent var(--primary) transparent transparent;
     }
 }
