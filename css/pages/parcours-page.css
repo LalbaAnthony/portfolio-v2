@@ -101,9 +101,20 @@
     }
 }
 
-.flex-between {
-    display: flex;
-    justify-content: space-between;
+/* DESKTOP */
+@media (min-width: 1023px) {
+    .top-card-parcours {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+/* MOBILE & TABLET */
+@media (max-width: 1023px) {
+    .top-card-parcours {
+        display: block;
+    }
 }
 
 img.logo-business {

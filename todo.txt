@@ -5,19 +5,18 @@ TODO:
 - [X] Changer style des elements selectionnés du header 
 - [X] Reduire les bordures sur mobile
 - [X] Improve les tyle des main-title
+- [X] Réduire le padding des elemnt projet/competences sur mobile
 - [X] Pages projet:
     - [X] Avec pastilles
     - [X] Fixer les last update dates toute similaire
     - [X] Message pas de projets chargé / roue de chargement
-- [ ] Réduire le padding des elemnt projet/competences sur mobile
+- [X] Page parcours:
+    - [X] Prendre moins de vide sur mobile
+    - [X] Fix bug affichage logo
+    - [X] Fade sur les bout de la ligne centrale
 - [ ] Page contact:
     - [ ] Terminer le style
     - [ ] Faire adresse mail ou tel avec ou au centre
-- [] Page parcours:
-    - [ ] Prendre moins de vide sur mobile
-    - [ ] Mettre animation sur le lien
-    - [X] Fix bug affichage logo
-    - [X] Fade sur les bout de la ligne centrale
 - [ ] Page competence:
     - [ ] Faire des filtres pastilles avec les categories
     - [X] Faire deux fichiers ou ya que les listes (categories + competences)
