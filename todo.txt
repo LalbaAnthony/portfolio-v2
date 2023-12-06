@@ -1,6 +1,6 @@
 TODO:
 - [X] Fixer le hover des buttons
-- [X] Terminer accueil avec reponsive
+- [X] Terminer accueil responsive
 - [X] Refaire le style des titres de page
 - [X] Changer style des elements selectionnés du header 
 - [X] Reduire les bordures sur mobile
@@ -33,4 +33,3 @@ TODO:
 - [ ] Ajouter animations a l'affichage et au hover de chaque element
 - [ ] Ajouter sr-only partout
 - [ ] Faire un lighthouse et tout opti pour un 100 100 100 100
-- [ ] Détourer et mettre ma photo

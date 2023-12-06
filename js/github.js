@@ -4,7 +4,7 @@ function getColorFromLanguage(language) {
     const data = {
         'JavaScript': '#f1e05a',
         'HTML': '#e34c26',
-        'CSS': '#563d7c',
+        'CSS': '#2465f1',
         'PHP': '#4F5D95',
         'C#': '#178600',
         'C++': '#f34b7d',

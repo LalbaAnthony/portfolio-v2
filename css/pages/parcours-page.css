@@ -73,8 +73,8 @@
     position: relative;
 }
 
-/* MOBILE */
-@media (max-width: 767px) {
+/* MOBILE & TABLET */
+@media (max-width: 1023px) {
     .timeline::after {
         left: 40px;
     }
