@@ -8,7 +8,7 @@ function getColorFromLanguage(language) {
         'PHP': '#4F5D95',
         'C#': '#178600',
         'C++': '#f34b7d',
-        'Vue': '#2c3e50',
+        'Vue': '#3FB27F',
         'Python': '#3572A5',
         'TypeScript': '#2b7489',
         'Java': '#b07219',
