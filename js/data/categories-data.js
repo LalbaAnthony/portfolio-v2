@@ -21,17 +21,17 @@ const categories = [
     },
     {
         id: 5,
-        name: 'Normes',
+        name: 'Norme',
         color: '#3498db',
     },
     {
         id: 6,
-        name: 'Frameworks',
+        name: 'Framework',
         color: '#138770',
     },
     {
         id: 10,
-        name: 'Autres',
+        name: 'Autre',
         color: '#ffcc00',
     },
 ];
