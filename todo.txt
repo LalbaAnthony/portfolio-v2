@@ -5,7 +5,7 @@ TODO:
 - [X] Changer style des elements selectionnés du header 
 - [X] Reduire les bordures sur mobile
 - [X] Improve les tyle des main-title
-- [X] Réduire le padding des elemnt projet/competences sur mobile
+- [ ] Réduire le padding des elemnt projet/competences sur mobile
 - [X] Pages projet:
     - [X] Avec pastilles
     - [X] Fixer les last update dates toute similaire
