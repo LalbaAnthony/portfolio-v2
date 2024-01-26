@@ -60,5 +60,3 @@ function getCompetences(orderBy = 'categoryName', order = 'asc') {
 
     return competencesWithCategories;
 }
-
-console.log(getCompetences());

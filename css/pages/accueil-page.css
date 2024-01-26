@@ -24,8 +24,13 @@
     .side-by-side-60-40>.subsection2 {
         order: 1;
         width: 50%;
-        margin: 0 auto 1rem auto;
+        margin: auto;
     }
+}
+
+.side-by-side-60-40>.subsection2 {
+    display: flex;
+    justify-content: center;
 }
 
 .fullname-title {
@@ -47,7 +52,7 @@
     border-radius: 25px;
     padding: 10px;
     margin: 0 5px;
-    transition: all 0.3s;
+    transition: ease-in-out 0.2s;
 }
 
 .social-item:hover {
@@ -59,6 +64,12 @@
     fill: var(--primary);
 }
 
-.wavy-background {
-    fill: var(--primary);
+.me-picture {
+    width: 100%;
+    height: auto;
+    clip-path: url(#custom-clip-path);
+}
+
+#custom-clip-path {
+    /* ... */
 }

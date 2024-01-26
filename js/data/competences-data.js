@@ -2,7 +2,7 @@ const competences = [
     {
         id: 1,
         name: 'HTML',
-        category: 1,
+        category: 5,
         numberOfProjects: 'des dizaines',
         since: '2020',
         ratingOutOfTen: 9,
