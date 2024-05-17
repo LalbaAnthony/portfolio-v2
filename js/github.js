@@ -58,6 +58,12 @@ async function getProjects(orderby = 'date', order = 'desc') {
         }
         const projects = await response.json();
 
+        // Remove the LalbaAnthony project
+        const index = projects.findIndex(project => project.name === 'LalbaAnthony');
+        if (index !== -1) {
+            projects.splice(index, 1);
+        }
+
         // Format projects
         const formattedProjects = projects.map(project => ({
             name: project.name,
