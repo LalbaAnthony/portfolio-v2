@@ -12,7 +12,8 @@ function getColorFromLanguage(language) {
         'Python': '#3572A5',
         'TypeScript': '#2b7489',
         'Java': '#b07219',
-        'C': '#555555'
+        'C': '#555555',
+        'PowerShell': '#012456',
     };
     return data[language] || data[language.toLowerCase()] || '#000000';
 }
