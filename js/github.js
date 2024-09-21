@@ -12,7 +12,8 @@ function getColorFromLanguage(language) {
         'Python': '#3572A5',
         'TypeScript': '#2b7489',
         'Java': '#b07219',
-        'C': '#555555'
+        'C': '#555555',
+        'PowerShell': '#012456',
     };
     return data[language] || data[language.toLowerCase()] || '#000000';
 }
@@ -57,6 +58,12 @@ async function getProjects(orderby = 'date', order = 'desc') {
             throw new Error(`Erreur : ${response.status}`);
         }
         const projects = await response.json();
+
+        // Remove the LalbaAnthony project
+        const index = projects.findIndex(project => project.name === 'LalbaAnthony');
+        if (index !== -1) {
+            projects.splice(index, 1);
+        }
 
         // Format projects
         const formattedProjects = projects.map(project => ({
