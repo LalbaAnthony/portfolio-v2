@@ -1,11 +1,8 @@
 # Portfolio - Anthony Lalba
 
------
-
-## 📄 - Description :
+## 📄 - Présentation :
 
 <p>
 	Voici mon portfolio, disponible <a href="https://anthonylalba.com" target="_blank">ici</a>.
 </p>
 
------
