@@ -1,6 +1,7 @@
 const username = 'LalbaAnthony';
 
 function getColorFromLanguage(language) {
+    if (!language) return '#000000';
     const data = {
         'JavaScript': '#f1e05a',
         'HTML': '#e34c26',
@@ -70,9 +71,9 @@ async function getProjects(orderby = 'date', order = 'desc') {
             name: project.name,
             url: project.html_url,
             language: project.language,
-            language_color: getColorFromLanguage(project.language),
+            language_color: getColorFromLanguage(project?.language),
             pushed_at: project.pushed_at,
-            pushed_at_relative: formatRelativeDate(project.pushed_at),
+            pushed_at_relative: formatRelativeDate(project?.pushed_at),
         }));
 
         // Sort projects
